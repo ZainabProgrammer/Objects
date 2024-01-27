@@ -1,0 +1,21 @@
+
+
+  const isObject = (arg) => {
+    if (Array.isArray(arg)) {
+      return false;
+    } else if (typeof arg === "object") {
+      return true;
+    }
+    return false;
+  };
+
+
+  let str = "helloo everyoone";
+  let num = 34;
+  let arr = [1];
+  let obj = { id: 0 };
+
+  console.log(isObject(str), "for str");  //false;
+  console.log(isObject(num), "for num");  //false;
+  console.log(isObject(arr), "for array");  //false;
+  console.log(isObject(obj), "for object");   //true;
