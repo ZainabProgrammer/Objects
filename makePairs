@@ -1,0 +1,21 @@
+1)  function makePairs(obj) {
+    return [[Object.entries(obj)]];
+  }
+
+  let obj = {
+    a: 1,
+    b: 2,
+  };
+
+  console.log(makePairs(obj), "nested arr");  // [['a':1],['b':2]]
+
+-----same logic but detail approach:-----
+
+ 2) function makePairs(obj) {
+    return Object.keys(obj).map((e) => [e, obj[e]]);
+  }
+  let obj = {
+    a: 1,
+    b: 2,
+  };
+  console.log(makePairs(obj), "nested arr");
